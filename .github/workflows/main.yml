@@ -7,12 +7,12 @@ jobs:
     - uses: CIRCLECI-GWP/github-project-automation-plus@v1
       with:
         project: Maintenance
-        column: Routine
+        column: To do
         repo-token: ${{ secrets.PROJECT_ADMIN_TOKEN }}
       if: "contains(github.head_ref, 'dependencies')"
     - uses: CIRCLECI-GWP/github-project-automation-plus@v1
       with:
         project: Maintenance
-        column: To do
+        column: In progress
         repo-token: ${{ secrets.PROJECT_ADMIN_TOKEN }}
       if: "!contains(github.head_ref, 'dependencies')"
