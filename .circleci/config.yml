@@ -9,4 +9,4 @@ jobs:
       - run: npm install
       - run:
           name: Run Playwright specs
-          command: xvfb-run npm run test
+          command: xvfb-run -a npm run test
